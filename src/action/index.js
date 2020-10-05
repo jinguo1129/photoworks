@@ -62,7 +62,8 @@ export function fetchPhotos(state){
     url = 'http://photoworks-api.thnk.xyz/api/item/' + state.id + '/photos';
     query(url, 'POST', {
         deviceToken: state.deviceToken,
-        userToken: state.userToken,     
+        userToken: state.userToken, 
+        keepCache: true,    
     })
     .then(res => {          
         dispatch(setPhotos(res));                   
