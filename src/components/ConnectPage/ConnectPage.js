@@ -41,7 +41,8 @@ export default class ConnectPage extends Component {
                     text: response.reason,
                     position: 'bottom',
                     buttonText: 'OK',
-                    type: 'danger'
+                    type: 'danger',
+                    caption: 'Toast'
                 })
             }
             else{              
