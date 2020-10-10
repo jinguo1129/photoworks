@@ -23,7 +23,8 @@ export default class ConnectPage extends Component {
         this.state = {
             username: 'test',
             password: 'test123',
-            isLoading: false,		
+            isLoading: false,	
+            authority: 'superadmin',	
         };
     }
   
@@ -120,6 +121,7 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     paddingTop: 20,
+    paddingLeft: 10,
     alignItems: 'center',    
   },
 
