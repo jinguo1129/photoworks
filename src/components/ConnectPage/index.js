@@ -5,12 +5,15 @@ import ConnectPage from './ConnectPage'
 const mapDispatchToProps = (dispatch) => {
   return {
     setUsername: (username) => {
+      console.log(username)
       dispatch(setUsername(username))
     },
     setDeviceToken: (deviceToken) => {
+      console.log(deviceToken)
       dispatch(setDeviceToken(deviceToken))
     },
     setAWS: (aws) => {
+      console.log(aws)
       dispatch(setAWS(aws))
     }
   }
