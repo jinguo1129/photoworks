@@ -23,7 +23,8 @@ export default class Barcode extends Component {
             username: '',
             password: '',
             isLoading: false,
-            scanned: false		
+            scanned: false	
+            isBoxing: true,	
         };
     } 
 
@@ -36,6 +37,7 @@ export default class Barcode extends Component {
             position: 'bottom',
             duration: 1000,            
             type: 'success'
+            caption: 'Toast'
         })
        
         query('http://photoworks-api.thnk.xyz/api/search', 'POST', {
