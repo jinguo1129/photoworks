@@ -53,11 +53,13 @@ export default class Barcode extends Component {
                         'No Results Found',
                         'Do you want to create item with this BARCODE?',
                         [
-                            { text: 'NO', onPress: () => {                            
+                            { text: 'NO', onPress: () => {    
+                                console.log('Canceled by user.')                        
                                 return;
 
                             }, style: 'cancel'},
-                            { text: 'YES', onPress: () => {                                      
+                            { text: 'YES', onPress: () => {      
+                                console.log('barcode OK!')                                    
                                 this._createItem(code.data);                      
                             }},
                         ]             
