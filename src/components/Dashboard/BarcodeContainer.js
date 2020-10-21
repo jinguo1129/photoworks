@@ -13,12 +13,15 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => {
   return {
     setSearchKeyword: (keyword) => {
+      console.log(keyword)
       dispatch(setSearchKeyword(keyword))
     },
     setSearchResult: (result) => {
+      console.log(result)
       dispatch(setSearchResult(result))
     },
     setItemID: (id) => {
+      console.log(id)
       dispatch(setItemID(id))
     }
   }
