@@ -27,6 +27,7 @@ export default class Queue extends Component {
         this.data = [];
         this.state = {
             keyword: '',
+            status:  'ready',
             dataSource: this.ds.cloneWithRows([]),
         };
     }
@@ -45,7 +46,8 @@ export default class Queue extends Component {
                         text: response.reason,
                         position: 'bottom',
                         buttonText: 'OK',
-                        type: 'danger'
+                        type: 'danger',
+                        caption: 'Toast'
                 })
             }            
             else{        
