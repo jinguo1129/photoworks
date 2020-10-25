@@ -5,17 +5,17 @@ const styles = StyleSheet.create({
   
     container: {
       flex: 1,
-      padding: 12,
+      padding: 15,
       flexDirection: 'row',
       alignItems: 'center',
     },
     text: {
-      marginLeft: 12,
+      marginLeft: 15,
       fontSize: 16,
     },
     photo: {
-      height: 70,
-      width: 70,
+      height: 80,
+      width: 80,
       resizeMode: 'contain',
       borderColor: '#BDBDBD',
       borderWidth: 1,    
