@@ -29,7 +29,7 @@ export default class Search extends Component {
 
         this.ds = new ListView.DataSource({rowHasChanged: (r1, r2) => r1 !== r2});
         this.state = {
-         
+            status: 'search',
             isLoading: false,
             keyword: this.props.keyword,          
             dataSource: this.ds.cloneWithRows(this.props.result)
@@ -85,7 +85,8 @@ export default class Search extends Component {
                         text: response.reason,
                         position: 'bottom',
                         buttonText: 'OK',
-                        type: 'danger'
+                        type: 'danger',
+                        caption:'Toast',
                     })
                 }
             }
@@ -190,7 +191,7 @@ export default class Search extends Component {
 
 const styles = StyleSheet.create({
     searchContainer: {      
-        padding: 8,
+        padding: 10,
         height: 45,        
         margin: 0,
         backgroundColor: '#C1C1C1',
