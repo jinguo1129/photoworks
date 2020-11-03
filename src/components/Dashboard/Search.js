@@ -136,13 +136,13 @@ export default class Search extends Component {
             <Container style={ StyleSheet.flatten(styles.container) }> 
                 <Header>  
                     <Left/>              
-                    <Body style={{ paddingLeft: 30 }}>
+                    <Body style={{ paddingLeft: 30, paddingTop: 20, }}>
                         <Title>ADEN PhotoWorks</Title>
                     </Body>
                     <Right>
-                        {/*<TouchableHighlight>
+                        {<TouchableHighlight>
                             <Text style={ styles.btnText }>History</Text>
-                        </TouchableHighlight>*/}
+                        </TouchableHighlight>}
                     </Right>
                 </Header>   
                 <View >                
