@@ -30,7 +30,8 @@ export default class PhotoDetail extends Component {
   
     constructor(props) {
         super(props);
-        this.imageID = '';        
+        this.imageID = '';  
+        this.stateid = props.id;      
         
         this.ds = new ListView.DataSource({rowHasChanged: (r1, r2) => r1 !== r2});
         this.state = {
@@ -117,7 +118,8 @@ export default class PhotoDetail extends Component {
                 text: 'Saved',
                 position: 'bottom',
                 duration: 1000,            
-                type: 'success'
+                type: 'success',
+                caption: 'Toast'
             })
          })
          .catch( error => {
