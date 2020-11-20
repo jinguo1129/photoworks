@@ -183,6 +183,7 @@ const styles = StyleSheet.create({
         color: '#007AFF',
         fontSize: 17,
         fontWeight: 'bold',
+        margin: 5,
     },
 
     footerButton: {
@@ -196,11 +197,13 @@ const styles = StyleSheet.create({
         paddingBottom: 0,
         width: 60,
         height: 60,
+        margin: 5,
     },
 
     container: {
         backgroundColor: 'white',
         flex: 1, 
+        margin: 5,
     },
 
     separator: {
