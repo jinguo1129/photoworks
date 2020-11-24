@@ -32,7 +32,7 @@ export default class LoginPage extends Component {
             selectedBranch: 'Default Branch', 
             username: '',
             password: '',   
-            
+            status: 'ready',
         }
     }
 
@@ -41,26 +41,30 @@ export default class LoginPage extends Component {
         this.setState({isLoading: true});
 
         storage.get('aws').then(value => {
-            
+            console.log(value)
             this.props.setAWS(JSON.parse(value));      
         })
 
         storage.get('companyName').then(value => {
+            console.log(value)
             this.setState({ companyName : value });            
         })
 
         storage.get('username').then(value => {            
+            console.log(value)
             this.setState({ username : value });
             this.refs.password._root.focus();
         })
       
         storage.get('defaultBranch').then(value => {
+            console.log(value)
             if (value){
                 this.setState({ selectedBranch : value });              
             }
         })
 
         storage.get('deviceToken').then(value => {
+            console.log(value)
             this.props.setDeviceToken(value)
             this.setState({ deviceToken : value });            
             this._getBranch(value);  
