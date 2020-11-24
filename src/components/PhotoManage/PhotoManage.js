@@ -35,17 +35,20 @@ export default class PhotoManage extends Component {
 
     componentWillMount(){        
         var source = this.ds.cloneWithRows(this.state.data);
+        console.log(source)
         this.setState({ dataSource: source });        
     }
 
     componentWillReceiveProps(nextProps){        
         var source = this.ds.cloneWithRows(nextProps.photos);
+        console.log(source)
         this.setState({ data: nextProps.photos, dataSource: source })
     }
 
     onSwichMode = () => {  
         this.setState( prevState => ({ isSelectMode: !prevState.isSelectMode }))   
         var source = this.ds.cloneWithRows(this.state.data);
+        console.log(source)
         this.setState({ dataSource: source, selectedList: [], selectedCount: 0 });        
     }
 
