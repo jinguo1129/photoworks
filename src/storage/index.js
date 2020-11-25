@@ -4,7 +4,8 @@ import { AsyncStorage } from 'react-native'
 export default class Storage {
 	get = async function( key ) {
 		try {
-			const value = await AsyncStorage.getItem(key);			
+			const value = await AsyncStorage.getItem(key);		
+			console.log( value );	
 			if (value !== null)
 				return value;
 		} catch (error) {

@@ -6,6 +6,7 @@ export function query(url, method, body){
         headers: {
             'Accept': 'application/json',
             'Content-Type': 'application/json',
+            'Pragma': 'no-cache',
         },        
         body: JSON.stringify(body)
     });
