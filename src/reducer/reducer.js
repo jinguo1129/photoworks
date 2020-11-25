@@ -5,11 +5,13 @@ const initialState = {
     aws: {},
     search: {
       keyword: '',
-      result: []
+      result: [],
+      advanced: 'none',
     },
     id: '',
     photos: [],
     selectedPhoto: {},
+    searchdeepth: 0,
 }
 
 export default (state = initialState, action) => {
