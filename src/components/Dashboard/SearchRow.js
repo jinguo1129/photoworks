@@ -18,7 +18,7 @@ const styles = StyleSheet.create({
       width: 70,
       resizeMode: 'contain',
       borderColor: '#BDBDBD',
-      borderWidth: 2,    
+      borderWidth: 1,    
     },
 });
 
@@ -36,7 +36,6 @@ class Row extends Component{
             <TouchableOpacity onPress={ this.onPress }>
                 <View style={{flex: 1, flexDirection: 'row', padding: 10}}>
                     <View style={{flex: 1, flexDirection: 'column'}}>
-                        <Text>{this.props.id}</Text>
                         <Text>{this.props.partNumber}</Text>
                         <Text>{this.props.description}</Text>
                         <Text style={{opacity: 0.7}}>Additional notes about the item</Text> 
