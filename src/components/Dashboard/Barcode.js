@@ -23,8 +23,7 @@ export default class Barcode extends Component {
             username: '',
             password: '',
             isLoading: false,
-            scanned: false	
-            isBoxing: true,	
+            scanned: false		
         };
     } 
 
@@ -37,7 +36,6 @@ export default class Barcode extends Component {
             position: 'bottom',
             duration: 1000,            
             type: 'success'
-            caption: 'Toast'
         })
        
         query('http://photoworks-api.thnk.xyz/api/search', 'POST', {
@@ -53,13 +51,11 @@ export default class Barcode extends Component {
                         'No Results Found',
                         'Do you want to create item with this BARCODE?',
                         [
-                            { text: 'NO', onPress: () => {    
-                                console.log('Canceled by user.')                        
+                            { text: 'NO', onPress: () => {                            
                                 return;
 
                             }, style: 'cancel'},
-                            { text: 'YES', onPress: () => {      
-                                console.log('barcode OK!')                                    
+                            { text: 'YES', onPress: () => {                                      
                                 this._createItem(code.data);                      
                             }},
                         ]             
