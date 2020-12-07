@@ -176,19 +176,19 @@ const styles = StyleSheet.create({
 
     normalText: {
         color: '#007AFF',
-        fontSize: 17,
+        fontSize: 18,
     },
 
     selectedText: {
         color: '#007AFF',
-        fontSize: 17,
+        fontSize: 18,
         fontWeight: 'bold',
-        margin: 5,
+        margin: 6,
     },
 
     footerButton: {
-        paddingLeft: 5 ,
-        paddingRight: 5,  
+        paddingLeft: 6 ,
+        paddingRight: 6,  
         alignItems: 'center',
         justifyContent: 'center'
     },
@@ -197,13 +197,13 @@ const styles = StyleSheet.create({
         paddingBottom: 0,
         width: 60,
         height: 60,
-        margin: 5,
+        margin: 6,
     },
 
     container: {
         backgroundColor: 'white',
         flex: 1, 
-        margin: 5,
+        margin: 6,
     },
 
     separator: {
