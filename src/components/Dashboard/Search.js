@@ -29,7 +29,7 @@ export default class Search extends Component {
 
         this.ds = new ListView.DataSource({rowHasChanged: (r1, r2) => r1 !== r2});
         this.state = {
-         
+            status: 'search',
             isLoading: false,
             keyword: this.props.keyword,          
             dataSource: this.ds.cloneWithRows(this.props.result)
@@ -62,7 +62,8 @@ export default class Search extends Component {
             userToken:   this.props.userToken, 
             keyword:     this.state.keyword
         })
-        .then(response=> {     
+        .then(response=> {   
+            console.log(response)  
             this.setState({ isLoading: false });
             if (response.success == false) {   
                 if (response.reason == "No Results Found") {
@@ -85,7 +86,8 @@ export default class Search extends Component {
                         text: response.reason,
                         position: 'bottom',
                         buttonText: 'OK',
-                        type: 'danger'
+                        type: 'danger',
+                        caption:'Toast',
                     })
                 }
             }
@@ -108,7 +110,8 @@ export default class Search extends Component {
                 description: 'Optional Description'
                 }
             )
-            .then(res => {              
+            .then(res => {         
+                console.log(res);     
                 this.props.setItemID(res.id);
                 this.props.navigation.navigate('ProductDetail')
             })
@@ -135,13 +138,13 @@ export default class Search extends Component {
             <Container style={ StyleSheet.flatten(styles.container) }> 
                 <Header>  
                     <Left/>              
-                    <Body style={{ paddingLeft: 30 }}>
+                    <Body style={{ paddingLeft: 30, paddingTop: 20, }}>
                         <Title>ADEN PhotoWorks</Title>
                     </Body>
                     <Right>
-                        {/*<TouchableHighlight>
+                        {<TouchableHighlight>
                             <Text style={ styles.btnText }>History</Text>
-                        </TouchableHighlight>*/}
+                        </TouchableHighlight>}
                     </Right>
                 </Header>   
                 <View >                
@@ -190,7 +193,7 @@ export default class Search extends Component {
 
 const styles = StyleSheet.create({
     searchContainer: {      
-        padding: 8,
+        padding: 10,
         height: 45,        
         margin: 0,
         backgroundColor: '#C1C1C1',
