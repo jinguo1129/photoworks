@@ -110,9 +110,11 @@ export default class PhotoDetail extends Component {
         query(url, 'POST', {
              deviceToken: this.props.deviceToken, 
              userToken: this.props.userToken,
-             marks: this.state.pins,             
+             marks: this.state.pins,   
+             status: this.props.status,          
          })
          .then( res => {
+             console.log(res)
             this.setState({ isLoading: false });
             Toast.show({
                 text: 'Saved',
