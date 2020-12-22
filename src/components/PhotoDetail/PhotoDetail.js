@@ -114,7 +114,6 @@ export default class PhotoDetail extends Component {
              status: this.props.status,          
          })
          .then( res => {
-             console.log(res)
             this.setState({ isLoading: false });
             Toast.show({
                 text: 'Saved',

@@ -22,15 +22,15 @@ const styles = StyleSheet.create({
 
     text: {
       marginLeft: 12,
-      fontSize: 15,      
-      paddingTop: 7
+      fontSize: 16,      
+      paddingTop: 8
     },
 
     textRight: {
       marginRight: 20,
       fontSize: 15,      
       paddingTop: 7, 
-      paddingRight: 7,  
+      paddingRight: 8,  
       opacity: 0.7
     },
 
