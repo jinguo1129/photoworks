@@ -62,7 +62,8 @@ export default class Search extends Component {
             userToken:   this.props.userToken, 
             keyword:     this.state.keyword
         })
-        .then(response=> {     
+        .then(response=> {   
+            console.log(response)  
             this.setState({ isLoading: false });
             if (response.success == false) {   
                 if (response.reason == "No Results Found") {
@@ -109,7 +110,8 @@ export default class Search extends Component {
                 description: 'Optional Description'
                 }
             )
-            .then(res => {              
+            .then(res => {         
+                console.log(res);     
                 this.props.setItemID(res.id);
                 this.props.navigation.navigate('ProductDetail')
             })
